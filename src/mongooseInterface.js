@@ -10,7 +10,7 @@ exports.signup = function(req, res) {
           res.send(err);
       }
       console.log(user);
-      res.json(user);
+      res.send({msg: 'User Created'});
   })
 };
 

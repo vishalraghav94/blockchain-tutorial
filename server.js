@@ -35,7 +35,7 @@ app.post('/signup', function(req, res) {
            User.signup(req, res);
        }
        else {
-          res.send('User already Exist');
+          res.send({Error: 'User already exist'});
        }
     });
 });
@@ -58,5 +58,5 @@ app.post('/login', function(req, res) {
 });
 
 app.listen(4000, function () {
-   console.log('App ready and Listening on http://localhost:8080');
+   console.log('App ready and Listening on http://localhost:4000');
 });

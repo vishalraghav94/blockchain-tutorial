@@ -18,7 +18,7 @@
         </div>
         <div class="login">
             <div class="login-form">
-                <form action="/login" method="POST" ng-model="formData" id="login-form">
+                <form action="/login" method="POST" ng-model="formData" index="0" id="login-form">
                     <label for="username" class="label">Username</label>
                     <input type="text" name="username" class="input-text" placeholder="Username"><br>
                     <label for="password" class="label">Password</label>
@@ -27,12 +27,22 @@
                     <!--<button class="submit" onclick="submit()"></button>-->
                 </form>
             </div>
-            <div class="error">
-
-            </div>
         </div>
         <div class="signup">
+            <form action="/signup" method="POST" ng-model="formData" index="1" id="signup-form">
+                <label for="name" class="label">Create Password</label>
+                <input type="text" name="name" class="input-text" placeholder="Name"><br>
+                <label for="email" class="label">Create Password</label>
+                <input type="text" name="email" class="input-text" placeholder="Email"><br>
+                <label for="username" class="label">Username</label>
+                <input type="text" name="username" class="input-text" placeholder="Username"><br>
+                <label for="password" class="label">Create Password</label>
+                <input type="password" name="password" class="input-text" placeholder="Password"><br>
+                <input type="submit" value="Sign Up" class="submit-button">
+            </form>
+            <div class="user-msg">
 
+            </div>
         </div>
     </div>
 </body>

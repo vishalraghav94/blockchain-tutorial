@@ -21,9 +21,32 @@ body {
         background-position: 0% 50%
     }
 }
+@keyframes error {
+    0% {
+        margin-left: -5px;
+    }
+    50% {
+        margin-left: 5px;
+    }
+    100% {
+        margin-left: -5px;
+    }
+}
+.error-animation {
+    animation:  error 100ms ease 8;
+}
+.login {
+    position: absolute;
+    height: 400px;
+    width: 331px;
+    top: 66px;
+    left: 10%;
+    padding-top: 97px;
+    transition: all 500ms ease-in-out;
+}
 .input-text {
     padding: 8px 14px;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     box-sizing: border-box;
     width: 100%;
     border-radius: 70px;
@@ -51,7 +74,8 @@ body {
 }
 
 .main-container {
-    width: 407px;
+    width: 408px;
+    position: relative;
     border: 1px solid black;
     height: 519px;
     margin: 123px auto;
@@ -60,6 +84,7 @@ body {
     padding: 37px;
     background-size: cover;
     border-radius: 4px;
+    overflow: hidden;
 }
 .label {
     display: block;
@@ -72,6 +97,7 @@ body {
 }
 .submit-button {
     width: 100%;
+    margin-top: 8px;
     padding: 9px;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
@@ -81,6 +107,54 @@ body {
     color: white;
     font-size: 13px;
     cursor: pointer;
+    outline: none;
     border-radius: 55px
 }
-
+.tab-switch {
+    width: 100%;
+}
+.tab-container {
+    width: 50%;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+}
+.sign-in-tab {
+    margin-right: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+.sign-up-tab {
+    margin-left: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+.activated-tab {
+    border-bottom: 2px solid #C6FF00;
+}
+.tab:hover {
+    border-bottom: 2px solid #C6FF00;
+}
+.signup {
+    position: absolute;
+    height: 400px;
+    width: 331px;
+    top: 77px;
+    left: 100%;
+    transition: all 500ms ease-in-out;
+}
+.active-tab {
+    top: 77px;
+    left: 10%;
+}
+.inactive-sign-in {
+    left: -82%;
+}
+.user-msg {
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-size: 11px;
+}
