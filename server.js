@@ -28,16 +28,20 @@ app.get('/welcome', function(req, res) {
     }
 });
 app.post('/signup', function(req, res) {
-    const promise =  User.findOne({username: req.body.username});
-    const promise2 = User.findOne({email: req.body.email});
-    Promise.all([promise, promise2]).then(function(values) {
-       if (!values[0] && !values[1]) {
-           User.signup(req, res);
-       }
-       else {
-          res.send({Error: 'User already exist'});
-       }
-    });
+    var bool = checkFormData(req.body);
+    if (bool) {
+        const promise =  User.findOne({username: req.body.username});
+        const promise2 = User.findOne({email: req.body.email});
+        Promise.all([promise, promise2]).then(function(values) {
+            if (!values[0] && !values[1]) {
+                User.signup(req, res);
+            }
+            else {
+                res.send({Error: 'User already exist'});
+            }
+        });
+    }
+    res.send({Error: 'Please fill all the fields'});
 });
 app.post('/login', function(req, res) {
   const promise =  User.findOne({username: req.body.username});
@@ -57,6 +61,15 @@ app.post('/login', function(req, res) {
   })
 });
 
+function checkFormData(obj) {
+    for (var property in obj) {
+        if (obj.hasOwnProperty(property)) {
+            if (obj[property] === '')
+                return false;
+        }
+    }
+    return true;
+}
 app.listen(4000, function () {
    console.log('App ready and Listening on http://localhost:4000');
 });

@@ -28,6 +28,9 @@ app.controller('loginController', function($scope, $http) {
                 else if (success.data.Error === 'User already exist') {
                     $('.user-msg').text('User with the same info already Exist');
                 }
+                else if (success.data.Error === 'Please fill all the fields') {
+                    $('.user-msg').text('Please fill all the fields');
+                }
                 else {
                     $($('.input-text')[1]).addClass('error-animation');
                     window.setTimeout(function() {

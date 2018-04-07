@@ -9,6 +9,7 @@ body {
     background-size: 400% 400%;
     text-transform: uppercase;
     animation: Gradient 8s ease infinite;
+    overflow: hidden;
 }
 @keyframes Gradient {
     0% {
@@ -23,17 +24,17 @@ body {
 }
 @keyframes error {
     0% {
-        margin-left: -5px;
+        margin-left: -10px;
     }
     50% {
-        margin-left: 5px;
+        margin-left: 10px;
     }
     100% {
-        margin-left: -5px;
+        margin-left: -10px;
     }
 }
 .error-animation {
-    animation:  error 100ms ease 8;
+    animation:  error 100ms ease  8;
 }
 .login {
     position: absolute;
@@ -78,7 +79,7 @@ body {
     position: relative;
     border: 1px solid black;
     height: 519px;
-    margin: 123px auto;
+    margin: 6px auto;
     box-sizing: border-box;
     background: linear-gradient( rgba(35,43,85,0.75), rgba(35,43,85,0.95)), url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
     padding: 37px;
@@ -157,4 +158,11 @@ body {
     text-align: center;
     color: white;
     font-size: 11px;
+}
+.header {
+    padding: 10px;
+    font-size: 89px;
+    text-align: center;
+    color: white;
+    letter-spacing: 12px;
 }

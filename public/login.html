@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
 </head>
 <body>
+<div class="header">
+   <div>Crypto Tutorial</div>
+    <div style="font-size: 34px;">
+        A blockchain development tutorial
+    </div>
+</div>
     <div ng-app="login" ng-controller="loginController" class="main-container">
         <div class="tab-switch">
             <div class="tab-container">
@@ -30,11 +36,11 @@
         </div>
         <div class="signup">
             <form action="/signup" method="POST" ng-model="formData" index="1" id="signup-form">
-                <label for="name" class="label">Create Password</label>
+                <label for="name" class="label">Name</label>
                 <input type="text" name="name" class="input-text" placeholder="Name"><br>
-                <label for="email" class="label">Create Password</label>
+                <label for="email" class="label">Email</label>
                 <input type="text" name="email" class="input-text" placeholder="Email"><br>
-                <label for="username" class="label">Username</label>
+                <label for="username" class="label">Create Username</label>
                 <input type="text" name="username" class="input-text" placeholder="Username"><br>
                 <label for="password" class="label">Create Password</label>
                 <input type="password" name="password" class="input-text" placeholder="Password"><br>
