@@ -41,7 +41,9 @@ app.post('/signup', function(req, res) {
             }
         });
     }
-    res.send({Error: 'Please fill all the fields'});
+    else {
+        res.send({Error: 'Please fill all the fields'});
+    }
 });
 app.post('/login', function(req, res) {
   const promise =  User.findOne({username: req.body.username});
