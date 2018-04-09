@@ -11,26 +11,20 @@
 <body>
     <div ng-app="tutorial" ng-controller="tutorialController" class="main-container">
         <div class="header col-12">
-            Crypto Tutorial
+            <span style="color: #42b983">Crypto Tutorial</span>
         </div>
         <div class="tut-container col-12">
             <div class="section col-3">
                <ul>
-                   <li class="topics">
-                       <a href="#!intro" class="anchor">Introduction</a>
-                   </li>
-                   <li class="topics">
-                       <a href="#!hello" class="anchor">Introduction</a>
-                   </li>
-                   <li class="topics">
-                       <a href="" class="anchor">Introduction</a>
-                   </li>
-                   <li class="topics">
-                       <a href="" class="anchor">Introduction</a>
+                   <li class="topics" ng-repeat="topic in topics">
+                       <a href="{{'#!' + topic.link}}" class="anchor">{{topic.topic}}</a>
                    </li>
                </ul>
             </div>
-            <div class="view col-9" ng-view>
+            <div class="view col-6" ng-view>
+
+            </div>
+            <div class="about-me col-3">
 
             </div>
         </div>

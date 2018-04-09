@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.template-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.topic-name {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 24px;
+    font-weight: bold;
+}
+.topic-detail {
+    padding: 26px 10px 10px 0;
+}
+b {
+    color: #42b983;
+}
+.list {
+    margin-top: 20px;
+    list-style-type: decimal;
+    font-size: 15px;
+    padding: 15px;
+    padding-left: 35px;
+    border: 1px solid #ddd;
+}
+.list-item {
+    margin-bottom: 7px;
+}
+.video {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.note {
+    color: #34495e;
+    font-size: 15px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-left: 4px solid #f66;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+p {
+    text-indent: 30px;
+}
