@@ -9,6 +9,8 @@ app.controller('loginController', function($scope, $http) {
         var index = parseInt($(this).attr('index'));
         var url = urls[index];
         data = parseFormData(data);
+        validateForm(data);
+        debugger;
         const req = {
             method: 'POST',
             url: url,
@@ -59,12 +61,17 @@ app.controller('loginController', function($scope, $http) {
         $('.signup').addClass('active-tab');
         $('.login').addClass('inactive-sign-in');
     });
-    function parseFormData(data) {
-        let i;
-        var obj= {};
-        for (i = 0; i < data.length; i++) {
-            obj[data[i].name] = data[i].value;
-        }
-        return obj;
-    }
 });
+
+function parseFormData(data) {
+    let i;
+    var obj= {};
+    for (i = 0; i < data.length; i++) {
+        obj[data[i].name] = data[i].value;
+    }
+    return obj;
+}
+
+function validateForm(data) {
+    console.log(data);
+}

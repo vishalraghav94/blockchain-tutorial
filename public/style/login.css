@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+}
 * {
-    font-family: 'Open Sans' !important;
+    font-family: "Open Sans";
     margin: 0;
     padding: 0;
     border: 0;
@@ -161,7 +169,7 @@ body {
 }
 .header {
     padding: 10px;
-    font-size: 89px;
+    font-size: 8vw;
     text-align: center;
     color: white;
     letter-spacing: 12px;

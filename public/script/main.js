@@ -16,6 +16,7 @@ tutApp.controller('tutorialController', function($scope) {
     }
     data = $scope.topics;
 
+
 });
 tutApp.config(function($routeProvider) {
     $routeProvider
@@ -64,3 +65,10 @@ tutApp.config(function($routeProvider) {
 
     console.log(data);
 });
+window.onload = function() {
+    $(".anchor").first().addClass('active-anchor');
+    $(".anchor").on('click', function() {
+        $(".anchor").removeClass('active-anchor');
+        $(this).addClass('active-anchor');
+    });
+};
