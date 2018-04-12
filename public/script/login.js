@@ -10,7 +10,6 @@ app.controller('loginController', function($scope, $http) {
         var url = urls[index];
         data = parseFormData(data);
         validateForm(data);
-        debugger;
         const req = {
             method: 'POST',
             url: url,
